@@ -1,0 +1,13 @@
+[+] Kernel successfully decompressed in-memory (the offsets that follow will be given relative to the decompressed binary)
+[+] Version string: Linux version 4.14.141-g78f163c (builder@c4-miui-ota-bd102.bj) (Android (5484270 based on r353983c) clang version 9.0.3 (https://android.googlesource.com/toolchain/clang 745b335211bb9eadfa6aa6301f84715cee4b37c5) (https://android.googlesource.com/toolchain/llvm 60cf23e54e46c807513f7a36d0a7b777920b5881) (based on LLVM 9.0.3svn)) #1 SMP PREEMPT Wed Sep 2 17:33:32 WIB 2020
+[+] Guessed architecture: aarch64 successfully in 6.00 seconds
+[+] Found relocations table at file offset 0x1665da8 (count=194630)
+[+] Found kernel text candidate: 0xffffff8008082000
+Traceback (most recent call last):
+  File "/drone/src/vmlinux-to-elf/vmlinux_to_elf/kallsyms_finder.py", line 1102, in <module>
+    kallsyms = KallsymsFinder(obtain_raw_kernel_from_file(kernel_bin.read()), args.bit_size)
+  File "/drone/src/vmlinux-to-elf/vmlinux_to_elf/kallsyms_finder.py", line 188, in __init__
+    self.apply_elf64_rela()
+  File "/drone/src/vmlinux-to-elf/vmlinux_to_elf/kallsyms_finder.py", line 356, in apply_elf64_rela
+    img[offset:offset+8] = pack('<Q', value)
+struct.error: argument out of range
