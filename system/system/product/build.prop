@@ -1,0 +1,9 @@
+
+#
+# ADDITIONAL PRODUCT PROPERTIES
+#
+ro.build.characteristics=default
+ro.miui.build.region=cn
+persist.device_config.runtime_native.usap_pool_enabled=false
+Build.BRAND=MTK
+
