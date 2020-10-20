@@ -1,0 +1,13 @@
+# begonia-user 9 PPR1.180610.011 V11.0.6.0.PGGMIXM release-keys
+- manufacturer: xiaomi
+- platform: mt6785
+- codename: begonia
+- flavor: begonia-user
+- release: 9
+- id: PPR1.180610.011
+- incremental: V11.0.6.0.PGGMIXM
+- tags: release-keys
+- fingerprint: Redmi/begonia/begonia:9/PPR1.180610.011/V11.0.6.0.PGGMIXM:user/release-keys
+- brand: Redmi
+- branch: begonia-user-9-PPR1.180610.011-V11.0.6.0.PGGMIXM-release-keys
+- repo: redmi_begonia_dump
