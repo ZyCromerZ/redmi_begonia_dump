@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EccTable>
+    <!--
+        The attribute definition for tag EccEntry:
+        - Ecc: the emergnecy number
+        - Category: the service category (From 3GPP TS24.008)
+            - Bit 1 (1): Police
+            - Bit 2 (2): Ambulance
+            - Bit 3 (4): Fire Brigade
+            - Bit 4 (8): Marine Guard
+            - Bit 5 (16): Mountain Rescue
+            - Bit 6 (32): Manually initiated eCall
+            - Bit 7 (64): Automatically initiated eCall
+            - Bit 8 (128): is spare and set to "0"
+        - Condition: there are following values:
+            - 0: ecc only when no sim
+            - 1: ecc always
+            - 2: MMI will show ecc but send to nw as normal call
+    -->
+
+    <!-- Add for China CTA -->
+    <EccEntry Ecc="110" Category="0" Condition="2" Plmn = "460 FFF" />
+    <EccEntry Ecc="119" Category="0" Condition="2" Plmn = "460 FFF" />
+    <EccEntry Ecc="120" Category="0" Condition="2" Plmn = "460 FFF" />
+    <EccEntry Ecc="122" Category="0" Condition="2" Plmn = "460 FFF" />
+    <!-- Support dial 999 under G+N/A case because CT network don't support
+         dial 999 without no CT SIM.
+    -->
+    <EccEntry Ecc="999" Category="0" Condition="2" Plmn = "460 FFF" />
+
+    <!-- Add for CT VOLTE requirement -->
+    <EccEntry Ecc="110" Category="1" Condition="1" Plmn = "460 11" />
+    <EccEntry Ecc="119" Category="4" Condition="1" Plmn = "460 11" />
+    <EccEntry Ecc="120" Category="2" Condition="1" Plmn = "460 11" />
+    <EccEntry Ecc="122" Category="8" Condition="1" Plmn = "460 11" />
+
+    <!-- Add 999 for HK, 999 is ISO ECC in HK but no retry will be performed
+         for ISO ECC, add ECC config to workaround.
+    -->
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn = "454 03" />
+
+    <!-- Add for Malaysis Digi operator -->
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn = "502 FFF" />
+
+    <!-- Add for Thailand TrueMove operator (520 00/04) -->
+    <EccEntry Ecc="112" Category="1" Condition="1" Plmn = "520 00" />
+    <EccEntry Ecc="191" Category="1" Condition="1" Plmn = "520 00" />
+    <EccEntry Ecc="911" Category="1" Condition="1" Plmn = "520 00" />
+    <EccEntry Ecc="199" Category="4" Condition="1" Plmn = "520 00" />
+    <EccEntry Ecc="1669" Category="2" Condition="1" Plmn = "520 00" />
+    <EccEntry Ecc="112" Category="1" Condition="1" Plmn = "520 04" />
+    <EccEntry Ecc="191" Category="1" Condition="1" Plmn = "520 04" />
+    <EccEntry Ecc="911" Category="1" Condition="1" Plmn = "520 04" />
+    <EccEntry Ecc="199" Category="4" Condition="1" Plmn = "520 04" />
+    <EccEntry Ecc="1669" Category="2" Condition="1" Plmn = "520 04" />
+
+    <!-- Add for Taiwan FET operator (466 01) -->
+    <EccEntry Ecc="110" Category="1" Condition="2" Plmn = "466 01" />
+    <EccEntry Ecc="112" Category="2" Condition="1" Plmn = "466 01" />
+    <EccEntry Ecc="119" Category="4" Condition="2" Plmn = "466 01" />
+    <EccEntry Ecc="911" Category="2" Condition="1" Plmn = "466 01" />
+
+    <!-- Add for Taiwan APTG operator (466 05) -->
+    <EccEntry Ecc="110" Category="1" Condition="1" Plmn = "466 05" />
+    <EccEntry Ecc="112" Category="4" Condition="1" Plmn = "466 05" />
+    <EccEntry Ecc="119" Category="2" Condition="1" Plmn = "466 05" />
+
+    <!-- Add for Taiwan CHT operator (466 92) -->
+    <EccEntry Ecc="110" Category="0" Condition="2" Plmn = "466 92" />
+    <EccEntry Ecc="119" Category="0" Condition="2" Plmn = "466 92" />
+
+    <!-- Add for Japan KDDI operator (466 05) -->
+    <EccEntry Ecc="184110" Category="0" Condition="1" Plmn = "440 FF" />
+    <EccEntry Ecc="184118" Category="0" Condition="1" Plmn = "440 FF" />
+    <EccEntry Ecc="184119" Category="0" Condition="1" Plmn = "440 FF" />
+    <EccEntry Ecc="186110" Category="0" Condition="1" Plmn = "440 FF" />
+    <EccEntry Ecc="186118" Category="0" Condition="1" Plmn = "440 FF" />
+    <EccEntry Ecc="186119" Category="0" Condition="1" Plmn = "440 FF" />
+
+    <!-- xiaomi add being -->
+
+    <!-- Add for Greece operator -->
+    <EccEntry Ecc="100" Category="1" Condition="1" Plmn = "202 FFF" />
+    <EccEntry Ecc="166" Category="2" Condition="1" Plmn = "202 FFF" />
+    <EccEntry Ecc="199" Category="4" Condition="1" Plmn = "202 FFF" />
+
+    <!-- Add for Czech Republic operator -->
+    <EccEntry Ecc="150" Category="0" Condition="0" Plmn = "230 FFF" />
+    <EccEntry Ecc="155" Category="0" Condition="0" Plmn = "230 FFF" />
+    <EccEntry Ecc="158" Category="0" Condition="0" Plmn = "230 FFF" />
+
+    <!-- Add for United Kingdom operator -->
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn = "234 FFF" />
+
+    <!-- Add for Poland operator -->
+    <EccEntry Ecc="997" Category="1" Condition="1" Plmn = "260 FFF" />
+    <EccEntry Ecc="999" Category="2" Condition="1" Plmn = "260 FFF" />
+    <EccEntry Ecc="998" Category="4" Condition="1" Plmn = "260 FFF" />
+
+    <!-- Add for United States operator -->
+    <EccEntry Ecc="*911" Category="0" Condition="1" Plmn = "310 FFF" />
+    <EccEntry Ecc="#911" Category="0" Condition="1" Plmn = "310 FFF" />
+
+    <!-- Add for Mexico operator -->
+    <EccEntry Ecc="060" Category="0" Condition="1" Plmn = "334 FFF" />
+    <EccEntry Ecc="066" Category="0" Condition="1" Plmn = "334 FFF" />
+
+    <!-- Add for Myanmar operator -->
+    <EccEntry Ecc="191" Category="0" Condition="2" Plmn = "414 FFF" />
+    <EccEntry Ecc="192" Category="0" Condition="2" Plmn = "414 FFF" />
+    <EccEntry Ecc="199" Category="0" Condition="2" Plmn = "414 FFF" />
+
+    <!-- Add for Palestine operator -->
+    <EccEntry Ecc="100" Category="0" Condition="2" Plmn = "425 FFF" />
+    <EccEntry Ecc="101" Category="0" Condition="2" Plmn = "425 FFF" />
+    <EccEntry Ecc="102" Category="0" Condition="2" Plmn = "425 FFF" />
+    <EccEntry Ecc="1221" Category="0" Condition="2" Plmn = "425 FFF" />
+
+    <!-- Add for Nepal operator -->
+    <EccEntry Ecc="100" Category="0" Condition="0" Plmn = "429 FFF" />
+    <EccEntry Ecc="101" Category="0" Condition="0" Plmn = "429 FFF" />
+    <EccEntry Ecc="102" Category="0" Condition="0" Plmn = "429 FFF" />
+    <EccEntry Ecc="108" Category="0" Condition="0" Plmn = "429 FFF" />
+
+    <!-- Add for South Korea operator -->
+    <EccEntry Ecc="111" Category="6" Condition="0" Plmn = "450 FFF" />
+    <EccEntry Ecc="113" Category="3" Condition="0" Plmn = "450 FFF" />
+    <EccEntry Ecc="117" Category="18" Condition="0" Plmn = "450 FFF" />
+    <EccEntry Ecc="118" Category="19" Condition="0" Plmn = "450 FFF" />
+    <EccEntry Ecc="119" Category="4" Condition="0" Plmn = "450 FFF" />
+    <EccEntry Ecc="122" Category="8" Condition="0" Plmn = "450 FFF" />
+    <EccEntry Ecc="125" Category="9" Condition="0" Plmn = "450 FFF" />
+
+    <!-- Add for Vietnam operator -->
+    <EccEntry Ecc="113" Category="0" Condition="0" Plmn = "452 FFF" />
+    <EccEntry Ecc="114" Category="0" Condition="0" Plmn = "452 FFF" />
+    <EccEntry Ecc="115" Category="0" Condition="0" Plmn = "452 FFF" />
+
+    <!-- Add for Cambodia operator -->
+    <EccEntry Ecc="191" Category="0" Condition="1" Plmn = "456 FFF" />
+    <EccEntry Ecc="192" Category="0" Condition="1" Plmn = "456 FFF" />
+    <EccEntry Ecc="193" Category="0" Condition="1" Plmn = "456 FFF" />
+
+    <!-- Add for Laos operator -->
+    <EccEntry Ecc="191" Category="0" Condition="1" Plmn = "457 FFF" />
+    <EccEntry Ecc="192" Category="0" Condition="1" Plmn = "457 FFF" />
+    <EccEntry Ecc="193" Category="0" Condition="1" Plmn = "457 FFF" />
+
+    <!-- Add for Bangladesh operator -->
+    <EccEntry Ecc="100" Category="0" Condition="1" Plmn = "470 FFF" />
+    <EccEntry Ecc="101" Category="0" Condition="1" Plmn = "470 FFF" />
+    <EccEntry Ecc="102" Category="0" Condition="1" Plmn = "470 FFF" />
+    <EccEntry Ecc="108" Category="0" Condition="1" Plmn = "470 FFF" />
+
+    <!-- Add for Malaysia operator -->
+    <EccEntry Ecc="991" Category="0" Condition="1" Plmn = "502 FFF" />
+    <EccEntry Ecc="994" Category="0" Condition="1" Plmn = "502 FFF" />
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn = "502 FFF" />
+
+    <!-- Add for Indonesia operator -->
+    <EccEntry Ecc="110" Category="0" Condition="1" Plmn = "510 FFF" />
+    <EccEntry Ecc="118" Category="0" Condition="1" Plmn = "510 FFF" />
+    <EccEntry Ecc="199" Category="0" Condition="1" Plmn = "510 FFF" />
+    <EccEntry Ecc="113" Category="0" Condition="1" Plmn = "510 FFF" />
+
+    <!-- Add for Philippines operator -->
+    <EccEntry Ecc="117" Category="0" Condition="0" Plmn = "515 FFF" />
+    <EccEntry Ecc="192" Category="0" Condition="0" Plmn = "515 FFF" />
+
+    <!-- Add for Thailand operator -->
+    <EccEntry Ecc="191" Category="0" Condition="0" Plmn = "520 FFF" />
+    <EccEntry Ecc="1669" Category="0" Condition="0" Plmn = "520 FFF" />
+    <EccEntry Ecc="199" Category="0" Condition="0" Plmn = "520 FFF" />
+
+    <!-- Add for Singapore operator -->
+    <EccEntry Ecc="119" Category="0" Condition="1" Plmn = "525 FFF" />
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn = "525 FFF" />
+
+    <!-- Add for Chile operator -->
+    <EccEntry Ecc="123" Category="0" Condition="1" Plmn = "730 FFF" />
+    <EccEntry Ecc="133" Category="0" Condition="1" Plmn = "730 FFF" />
+
+    <!-- Peru operator-->
+    <EccEntry Ecc="105" Category="0" Condition="1" Plmn = "716 FF" />
+
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn = "852 FFF" />
+
+    <!-- xiaomi add end -->
+
+    <!-- Add for Telstra operator -->
+    <EccEntry Ecc="000" Category="0" Condition="1" Plmn = "505 FFF" />
+
+    <!-- 3GPP 22.101 -->
+    <EccEntry Ecc="112" Category="0" Condition="1" />
+    <EccEntry Ecc="911" Category="0" Condition="1" />
+    <EccEntry Ecc="000" Category="0" Condition="0" />
+    <EccEntry Ecc="08" Category="0" Condition="0" />
+    <EccEntry Ecc="110" Category="0" Condition="0" />
+    <EccEntry Ecc="118" Category="0" Condition="0" />
+    <EccEntry Ecc="119" Category="0" Condition="0" />
+    <EccEntry Ecc="999" Category="0" Condition="0" />
+</EccTable>

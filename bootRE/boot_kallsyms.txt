@@ -1,0 +1,15 @@
+[+] Kernel successfully decompressed in-memory (the offsets that follow will be given relative to the decompressed binary)
+[+] Version string: Linux version 4.14.94+ (builder@mi-server) (Android (4691093 based on r316199) clang version 6.0.2 (https://android.googlesource.com/toolchain/clang 183abd29fc496f55536e7d904e0abae47888fc7f) (https://android.googlesource.com/toolchain/llvm 34361f192e41ed6e4e8f9aca80a4ea7e9856f327) (based on LLVM 6.0.2svn)) #1 SMP PREEMPT Fri Dec 13 21:48:33 WIB 2019
+[+] Guessed architecture: aarch64 successfully in 6.50 seconds
+[+] Found relocations table at file offset 0x1705d30 (count=231439)
+[+] Found kernel text candidate: 0xffffff8008082000
+[+] Successfully applied 231439 relocations.
+[+] Found kallsyms_token_table at file offset 0x01366f00
+Traceback (most recent call last):
+  File "/drone/src/vmlinux-to-elf/vmlinux_to_elf/kallsyms_finder.py", line 1105, in <module>
+    kallsyms = KallsymsFinder(obtain_raw_kernel_from_file(kernel_bin.read()), args.bit_size)
+  File "/drone/src/vmlinux-to-elf/vmlinux_to_elf/kallsyms_finder.py", line 194, in __init__
+    self.find_kallsyms_token_index()
+  File "/drone/src/vmlinux-to-elf/vmlinux_to_elf/kallsyms_finder.py", line 475, in find_kallsyms_token_index
+    raise ValueError('This structure is not a kallsyms_token_table')
+ValueError: This structure is not a kallsyms_token_table
